@@ -1,2 +1,2 @@
-# countdown-template
+# stopwatch-template
 Created with CodeSandbox

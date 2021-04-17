@@ -3,22 +3,50 @@
   <head>
     <title>Stopwatch App</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css">
   </head>
 
   <body>
-    <div>
-      <h1>Stopwatch</h1>
-      <div>
-        <span>00m</span>
-        <span>:</span>
-        <span>00s</span>
-        <span>:</span>
-        <span>00ms</span>
+    <div class="app">
+      <div class="stopwatch">
+        <h2 class="stopwatch__title">Stopwatch</h1>
+        <div class="stopwatch__time">
+          <span>00m</span>
+          <span>:</span>
+          <span>00s</span>
+          <span>:</span>
+          <span>00ms</span>
+        </div>
+        <div class="stopwatch__controls">
+          <button>Start</button>
+          <button>Pause</button>
+          <button>Reset</button>
+          <button>Lap</button>
+        </div>
       </div>
-      <div>
-        <button>Start</button>
-        <button>Pause</button>
-        <button>Reset</button>
+
+      <div class="laps">
+        <h2 class="laps__title">Laps</h1>
+        <ul class="laps__list">
+          <li class="laps__item">
+            <h3 class="laps__item-number">#0</h5>
+            <div class="laps__item-time">
+              <span>00m</span>
+              <span>:</span>
+              <span>00s</span>
+              <span>:</span>
+              <span>00ms</span>
+            </div>
+              
+            <div class="laps__item-time">
+              <span>00m</span>
+              <span>:</span>
+              <span>00s</span>
+              <span>:</span>
+              <span>00ms</span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
 

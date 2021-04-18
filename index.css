@@ -66,6 +66,10 @@
   align-items: center;
 }
 
+.laps__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .laps__item-number {
   margin: 0;
   font-weight: normal;

@@ -46,15 +46,15 @@ function convertMiliseconds(value) {
   const seconds = Math.floor(value / 100) % 60;
   const miliseconds = value % 100;
   
-  return { minutes, seconds, miliseconds };
+  return { minutes: minutes < 10 ? '0' + minutes : minutes, seconds: seconds < 10 ? '0' + seconds : seconds, miliseconds: miliseconds < 10 ? '0' + miliseconds : miliseconds };
 };
 
 function showTime() {
   const {minutes, seconds, miliseconds} = convertMiliseconds(countMiliseconds);
 
-  document.querySelector('.minutes').innerText = `${minutes < 10 ? '0' + minutes : minutes}m`;
-  document.querySelector('.seconds').innerText = `${seconds < 10 ? '0' + seconds : seconds}s`;
-  document.querySelector('.miliseconds').innerText = `${miliseconds < 10 ? '0' + miliseconds : miliseconds}ms`;
+  document.querySelector('.minutes').innerText = `${minutes}m`;
+  document.querySelector('.seconds').innerText = `${seconds}s`;
+  document.querySelector('.miliseconds').innerText = `${miliseconds}ms`;
 }
 
 
@@ -70,11 +70,11 @@ function getLapItemTimeHTML(time) {
   div.classList.add('laps__item-time');
 
   div.innerHTML = `
-    <span>${minutes < 10 ? '0' + minutes : minutes}m</span>
+    <span>${minutes}m</span>
     <span>:</span>
-    <span>${seconds < 10 ? '0' + seconds : seconds}s</span>
+    <span>${seconds}s</span>
     <span>:</span>
-    <span>${miliseconds < 10 ? '0' + miliseconds : miliseconds}ms</span>
+    <span>${miliseconds}ms</span>
   `;
 
   return div;

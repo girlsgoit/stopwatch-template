@@ -33,6 +33,7 @@ document.querySelector('.pause-btn').addEventListener('click', handlePause);
 document.querySelector('.reset-btn').addEventListener('click', handleReset);
 
 function handleStart() {
+  clearInterval(intervalId);
   intervalId = setInterval(function() {
     countMiliseconds++;
     showTime();
